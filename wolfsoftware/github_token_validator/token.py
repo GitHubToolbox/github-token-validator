@@ -51,6 +51,8 @@ def validate_token(config: SimpleNamespace) -> Dict[str, Any]:
         response.raise_for_status()
 
         if response.status_code == 200:
+            user: Any = response.json()
+            json_data['owner'] = user['login']
             json_data['scopes'] = response.headers.get("X-OAuth-Scopes")
             json_data['rate_limit_limit'] = response.headers.get("X-RateLimit-Limit")
             json_data['rate_limit_remaining'] = response.headers.get("X-RateLimit-Remaining")
@@ -102,6 +104,7 @@ def display_token(data: Any) -> None:
     table = PrettyTable()
 
     table.field_names = ["Name", "Value"]
+    table.add_row(["Token Owner", data['owner']])
     table.add_row(["Token Scope", data['scopes']])
     table.add_row(["Rate Limit", data['rate_limit_limit']])
     table.add_row(["Rate Limit Used", data['rate_limit_used']])
