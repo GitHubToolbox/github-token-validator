@@ -1,4 +1,4 @@
 prettytable==3.10.0
 requests==2.32.3
-setuptools==70.0.0
+setuptools==70.1.0
 wolfsoftware.notify==0.1.0
