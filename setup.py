@@ -12,7 +12,7 @@ with open("README.md", 'r', encoding='UTF-8') as f:
 
 setup(
     name='wolfsoftware.github-token-validator',
-    version='0.1.1',
+    version='0.1.2',
     packages=['wolfsoftware.github_token_validator'],
     entry_points={
         'console_scripts': [
