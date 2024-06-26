@@ -12,7 +12,7 @@ with open("README.md", 'r', encoding='UTF-8') as f:
 
 setup(
     name='wolfsoftware.github-token-validator',
-    version='0.1.2',
+    version='0.1.3',
     packages=['wolfsoftware.github_token_validator'],
     entry_points={
         'console_scripts': [
@@ -21,7 +21,7 @@ setup(
     },
     author='Wolf Software',
     author_email='pypi@wolfsoftware.com',
-    description='A tool to validate GitHub Tokens',
+    description='A tool to validate GitHub Tokens.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/GitHubToolbox/github-token-validator',
