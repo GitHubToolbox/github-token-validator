@@ -1,3 +1,3 @@
-prettytable==3.11.0
+prettytable==3.12.0
 requests==2.32.3
 wolfsoftware.notify==0.1.2
